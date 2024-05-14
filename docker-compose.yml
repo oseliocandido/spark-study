@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  spark:
+    container_name: spark-study
+    image: spark:python3 
+    entrypoint: ['/bin/bash']
+    tty: true
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./:/opt/spark/work-dir/
