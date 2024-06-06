@@ -1,0 +1,57 @@
+- Independe da nuvem, tem em todo canto
+-  Airflow, spark, cloud (importante)
+- Spark como serviço gerenciado
+~
+
+#
+- Boas praticas de spark evitam tunnning, pois
+foi desenvolvido com melhores praticas 
+
+- Tunning diminui custos e faz ficar 
+dentro do SLA
+
+- Usar metricas do proprio spark e usar elas pra otimizar
+
+
+Problemas Comuns 
+- Data Volume Growth
+- 3S (Spill, skew)
+- Inneficient Resource Management
+ -- Se ovestimar, fica muito caro desnecessariamente
+- Spark Version 
+- Identnficar se eh cpu, memory, network bound, etc 
+
+- Entender o que seria partition size no spark e 
+e como configurar isso 
+
+- History Server eh importante e tem em 
+todo cluster  de spark 
+
+- Shuffle pelo que entendi eh causado por wide transformation (
+    join, group by, etc
+)
+
+- Elastic Search eh bem interessante de usar pra 
+avaliar os logs do spark
+
+
+
+- Foco na otimizacao na hora da escrita principalmente
+
+- Evemnt Timeline eh muito importante
+
+
+
+
+Categorias 
+- Performance Issues 
+ -- Small files
+ -- SHuffling Overhead 
+ -- Data Skew 
+ -- Allocation
+- Memory Management 
+- Configuration Issues
+- Scalibility Issues 
+
+
+spark measure, stageMetrics

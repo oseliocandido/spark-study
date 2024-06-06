@@ -1,0 +1,101 @@
+Concepts 
+- Encoding, Serialization, Compression
+
+Schema sao importantes para compressao dos dados
+e leitura dos dados 
+
+
+Arquivos que sao lidos com frequencia
+precisam ter trade off de compressao e cpu utilizaci
+on na leitura.
+
+Devem ser geralmente particionaveis para serem
+processados em pararelo!
+
+Index, Partitions, 
+
+Tecnicas de olap vmaos dizer assim 
+Index,
+Partition,
+Compression Algorithms
+Schema Metadata 
+Colunar format
+
+Small Files 
+- Data shuffle pq ai tem pouca threads pra tanta tasks 
+
+Big Files 
+- Nao aproverita processamento paralelo
+(Hash Partition )
+
+Snappy eh do google e comprime demais e rapido
+
+Chegar ainda em delta files e delta lakehouse e caramba 
+hellow world
+
+Problemas Comuns 
+- OOM (Out of Memory)
+- Smal and Big Files 
+- Schema Metadata not explicit or wrong 
+- Data shuffle
+- Data skew
+
+Pelo que entendi, eh no driver que cria executuon plan  (dAG ate pelo que sei)
+
+
+
+
+h 0
+e 1
+l 2
+o 3
+w 4
+r 5
+d 6
+
+
+
+0 1
+1 1
+2 2
+3 1
+4 2
+3 1
+5 1
+2 1
+6 1
+
+
+Name,Age\nJohn,25\nJane,30\nJohn,60\nJane,70\n
+
+Dado chega raw ladning no data lake/lakehouse
+Fica tudo raw, pq se no futuro der pau, tem como reprocessar aquele dia por exemplo
+
+A medida que tempo vai passando e tem arquivos muito antigos que n vao ser processados nem a   pau
+Comprime  mais eles ainda  e coloca em storage mais barato com glacier, etc 
+Ate fica em tipo modo sleep de energia o hardware pra ser mais barato
+
+Depopis
+
+
+Raw eh chamado tambmem de landing zone ou bronze ou whatever 
+
+
+Em alguns casos pra evitar ficar o problema de small files, talvez alguns arquivos raw sao consolidados com 
+combinebykey sendo que 
+
+
+APrender schemas de parquet e delta files e de avro e orc dps 
+
+Commom important formats 
+.parquet
+.orc 
+.avro 
+deltafiles 
+
+Aprender desses de cima como sao estruturados os dados, schema 
+COmo pegar metadados, como setar partitions no parquet, como pegar numero de particioes, etc 
+
+Avro and parquet support nested and complex data types. 
+
+Entender spark sql explode 
